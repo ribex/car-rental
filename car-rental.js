@@ -11,32 +11,31 @@ var carList = {
             style: 'sedan',
             price: 50,
             carsTotal: 125,
+            carsRented: 105,
             available: true
         },
         {
             style: 'suv',
             price: 100,
             carsTotal: 75,
-            available: true
+            carsRented: 75,
+            available: false
         },
         {
-            style: 'sports',
+            style: 'sports car',
             price: 200,
-            carsTotal: 15, 
+            carsTotal: 15,
+            carsRented: 3,
             available: true
         }
     ],
    
     // Method to check number of cars based on the style
-    numberAvailableByStyle: function (style, carsTotal, carsRented) {
-        this.style = style;
-        this.carsTotal = carsTotal;
-        this.carsRented = carsRented;
-        // Method to check car rental availability
-        this.checkAvailable = function() {
-            console.log("We have " + (this.carsTotal - this.carsRented) + " " + style +"s available to rent." );
-        };
-    return this.checkAvailable(this.carsTotal, this.carsRented);
+    numberAvailableByStyle: function() {
+        for (var i = 0; i < carList.cars.length; i++) {
+            console.log("Out of " + carList.cars[i].carsTotal + ", we have " + (carList.cars[i].carsTotal - carList.cars[i].carsRented) + " " + carList.cars[i].style +"s available to rent." );
+        }
     }
+
 };
     
