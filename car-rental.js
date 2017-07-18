@@ -32,10 +32,27 @@ var carList = {
    
     // Method to check number of cars based on the style
     numberAvailableByStyle: function() {
+        
         for (var i = 0; i < carList.cars.length; i++) {
-            console.log("Out of " + carList.cars[i].carsTotal + ", we have " + (carList.cars[i].carsTotal - carList.cars[i].carsRented) + " " + carList.cars[i].style +"s available to rent." );
+            var eachStyle = carList.cars[i];
+            console.log("Out of " + eachStyle.carsTotal + ", we have " + (eachStyle.carsTotal - eachStyle.carsRented) + " " + eachStyle.style +"s available to rent." );
         }
+    },
+    
+    rentalRequest: function(style) {
+        console.log("You would like to rent a " + style);
+        // if () {
+            
+        // } else {
+            
+        // }
+        
+        // console.log("")
+        
+        
+        return true;
     }
+    
 
 };
     
